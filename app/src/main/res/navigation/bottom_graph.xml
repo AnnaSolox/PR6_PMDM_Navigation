@@ -8,16 +8,41 @@
     <fragment
         android:id="@+id/bottom1Fragment"
         android:name="com.example.pr6pmdmnavigation.Bottom1Fragment"
-        android:label="Fragment Bottom 1"
-        tools:layout="@layout/fragment_bottom1" />
+        android:label="Bottom 1" />
     <fragment
         android:id="@+id/bottom2Fragment"
         android:name="com.example.pr6pmdmnavigation.Bottom2Fragment"
-        android:label="Fragment Bottom 2"
-        tools:layout="@layout/fragment_bottom2" />
+        android:label="Bottom 2" />
     <fragment
         android:id="@+id/bottom3Fragment"
         android:name="com.example.pr6pmdmnavigation.Bottom3Fragment"
-        android:label="Fragment Bottom 3"
-        tools:layout="@layout/fragment_bottom3" />
+        android:label="Bottom 3" />
+
+    <!-- Fragments para DrawerLayout -->
+    <fragment
+        android:id="@+id/drawer1Fragment"
+        android:name="com.example.pr6pmdmnavigation.Drawer1Fragment"
+        android:label="Drawer 1" />
+    <fragment
+        android:id="@+id/drawer2Fragment"
+        android:name="com.example.pr6pmdmnavigation.Drawer2Fragment"
+        android:label="Drawer 2" />
+    <fragment
+        android:id="@+id/drawer3Fragment"
+        android:name="com.example.pr6pmdmnavigation.Drawer3Fragment"
+        android:label="Drawer 3" />
+
+    <!-- Fragments para opciones de toolbar -->
+    <fragment
+        android:id="@+id/options1Fragment"
+        android:name="com.example.pr6pmdmnavigation.Options1Fragment"
+        android:label="Options 1" />
+    <fragment
+        android:id="@+id/options2Fragment"
+        android:name="com.example.pr6pmdmnavigation.Options2Fragment"
+        android:label="Options 2" />
+    <fragment
+        android:id="@+id/options3Fragment"
+        android:name="com.example.pr6pmdmnavigation.Options3Fragment"
+        android:label="Options 3" />
 </navigation>

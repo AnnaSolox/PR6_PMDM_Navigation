@@ -3,7 +3,6 @@ package com.example.pr6pmdmnavigation;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -12,7 +11,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,9 +23,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    private NavController optionsNavController;
-    private NavController drawerNavController;
-    private AppBarConfiguration appBarDrawerConfiguration;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,21 +43,19 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        NavController bottomNavController = ((NavHostFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.nav_host_bottom_fragment))).getNavController();
-        NavigationUI.setupWithNavController(binding.bottomNavView, bottomNavController);
+        navController = ((NavHostFragment) Objects.requireNonNull(
+                getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)))
+                .getNavController();
 
-        appBarDrawerConfiguration = new AppBarConfiguration.Builder(
-                R.id.drawer1Fragment, R.id.drawer2Fragment
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.options1Fragment, R.id.options2Fragment, R.id.options3Fragment,
+                R.id.drawer1Fragment, R.id.drawer2Fragment, R.id.drawer3Fragment,
+                R.id.bottom1Fragment, R.id.bottom2Fragment, R.id.bottom3Fragment
         ).setOpenableLayout(binding.main).build();
 
-        drawerNavController = ((NavHostFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.nav_host_drawer_fragment))).getNavController();
-        NavigationUI.setupWithNavController(toolbar, drawerNavController, appBarDrawerConfiguration);
-
-        AppBarConfiguration appbarOptionsConfiguration = new AppBarConfiguration.Builder(
-                R.id.options1Fragment, R.id.options2Fragment
-        ).build();
-        optionsNavController = ((NavHostFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.nav_host_bottom_fragment))).getNavController();
-        NavigationUI.setupWithNavController(toolbar, optionsNavController, appbarOptionsConfiguration);
+        NavigationUI.setupWithNavController(binding.bottomNavView, navController);
+        NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
 
     }
 
@@ -73,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return NavigationUI.onNavDestinationSelected(item, optionsNavController) ||
+        return NavigationUI.onNavDestinationSelected(item, navController) ||
                 super.onOptionsItemSelected(item);
     }
 
