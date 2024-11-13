@@ -4,16 +4,16 @@
     <item
         android:id="@+id/options1Fragment"
         android:icon="@android:drawable/ic_menu_directions"
-        android:title="Options 1"
+        android:title="@string/options_1_MenuTitle"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/options2Fragment"
         android:icon="@android:drawable/ic_menu_directions"
-        android:title="Options 2"/>
+        android:title="@string/options_2_MenuTitle"/>
 
     <item
         android:id="@+id/options3Fragment"
         android:icon="@android:drawable/ic_menu_directions"
-        android:title="Options 3"/>
+        android:title="@string/options_3_MenuTitle"/>
 </menu>

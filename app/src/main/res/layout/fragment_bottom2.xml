@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".Bottom2Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="BOTTOM 2" />
+        android:text="@string/bottom_2_text" />
 
 </FrameLayout>

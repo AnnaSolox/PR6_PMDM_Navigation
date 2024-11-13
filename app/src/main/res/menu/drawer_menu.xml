@@ -3,15 +3,15 @@
     <item
         android:id="@+id/drawer1Fragment"
         android:icon="@android:drawable/ic_menu_directions"
-        android:title="Drawer 1" />
+        android:title="@string/drawer_1_MenuTitle" />
 
     <item
         android:id="@+id/drawer2Fragment"
         android:icon="@android:drawable/ic_menu_directions"
-        android:title="Drawer 2" />
+        android:title="@string/drawer_2_MenuTitle" />
 
     <item
         android:id="@+id/drawer3Fragment"
         android:icon="@android:drawable/ic_menu_directions"
-        android:title="Drawer 3" />
+        android:title="@string/drawer_3_MenuTitle" />
 </menu>

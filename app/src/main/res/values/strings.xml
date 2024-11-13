@@ -1,5 +1,34 @@
 <resources>
     <string name="app_name">PR6 PMDM Navigation</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_toolbar">Activity Main</string>
+    <!--Textos Menu drawer-->
+    <string name="drawer_1_MenuTitle">Drawer 1</string>
+    <string name="drawer_2_MenuTitle">Drawer 2</string>
+    <string name="drawer_3_MenuTitle">Drawer 3</string>
+    <!--Textos Menu options-->
+    <string name="options_1_MenuTitle">Options 1</string>
+    <string name="options_2_MenuTitle">Options 2</string>
+    <string name="options_3_MenuTitle">Options 3</string>
+    <!--Textos Menu bottom-->
+    <string name="bottom_1_Menu_title">Bottom 1</string>
+    <string name="bottom_3_Menu_title">Bottom 3</string>
+    <string name="bottom_2_Menu_title">Bottom 2</string>
+    <!--Textos TabLayout-->
+    <string name="tab_a_text">TAB A</string>
+    <string name="tab_b_text">TAB B</string>
+    <string name="tab_c_text">TAB C</string>
+    <!--Textos Fragments options-->
+    <string name="options_3_text">OPTIONS 3</string>
+    <string name="options_2_text">OPTIONS 2</string>
+    <string name="options_1_text">OPTIONS 1</string>
+    <!--Textos Fragments drawer-->
+    <string name="drawer_3_text">DRAWER 3</string>
+    <string name="drawer_2_text">DRAWER 2</string>
+    <string name="drawer_1_text">DRAWER 1</string>
+    <!--Textos Fragments bottom-->
+    <string name="bottom_3_text">BOTTOM 3</string>
+    <string name="bottom_2_text">BOTTOM 2</string>
+    <!--Texto drawer header-->
+    <string name="text_drawer_header">Android is HARD</string>
+    <string name="image_drawer_header_description">launcher icon</string>
 </resources>
